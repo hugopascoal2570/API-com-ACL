@@ -5,9 +5,9 @@ namespace App\DTO\Users;
 class CreateUserDTO
 {
     public function __construct(
-        readonly public string $name,
-        readonly public string $email,
-        readonly public string $password,
+        public readonly string $name,
+        public readonly string $email,
+        public readonly string $password,
     ) {
         //
     }
