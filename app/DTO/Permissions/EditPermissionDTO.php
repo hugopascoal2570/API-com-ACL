@@ -5,9 +5,9 @@ namespace App\DTO\Permissions;
 class EditPermissionDTO
 {
     public function __construct(
-        readonly public string $id,
-        readonly public string $name,
-        readonly public string $description,
+         public readonly string $id,
+         public readonly string $name,
+         public readonly string $description,
     ) {
         //
     }
