@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\DTO\Users\CreateUserDTO;
 use App\DTO\Users\EditUserDTO;
+use App\Models\Permission;
 use App\Models\User;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
@@ -21,10 +22,11 @@ class UserRepository{
                 $query->where('name', 'LIKE', "%{$filter}%");
             }
         })
-        ->with(['permissions'])
+        ->with(['profiles.permissions'])
         ->paginate($totalPerPage, ['*'], 'page', $page);
     }
-
+    
+    
     public function createNew(CreateUserDTO $dto): User 
     {
         $data= (array) $dto;
@@ -82,7 +84,13 @@ class UserRepository{
         if ($user->isSuperAdmin()) {
             return true;
         }
-        return $user->permissions()->where('name', $permissionName)->exists();
+   
+        $profileIds = $user->profiles->pluck('id')->toArray();
+    
+        return Permission::whereHas('profiles', function ($query) use ($profileIds) {
+            $query->whereIn('id', $profileIds);
+        })->where('name', $permissionName)->exists();
     }
+    
 
 }

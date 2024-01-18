@@ -19,9 +19,6 @@ class UserController extends Controller
     {
         
     }
-    /**
-     * Display a listing of the resource.
-     */
     public function index(Request $request)
     {
         $users = $this->userRepository->getPaginate(
@@ -37,6 +34,7 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
+
         $user = $this->userRepository->createNew(new CreateUserDTO(... $request->validated()));
         return new UserResource($user);
     }

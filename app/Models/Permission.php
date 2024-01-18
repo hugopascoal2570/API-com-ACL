@@ -13,8 +13,8 @@ class Permission extends Model
 
     protected $fillable = ['name', 'description'];
 
-    public function users(): BelongsToMany
-    {
-        return $this->belongsToMany(User::class);
-    }
+    public function profiles(): BelongsToMany
+{
+    return $this->belongsToMany(Profile::class);
+}
 }
