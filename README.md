@@ -15,7 +15,7 @@ cd api-acl
 
 Crie o Arquivo .env
 ```sh
-cp .env.example .env
+cp .env.e✔ample .env
 ```
 
 Atualize essas variáveis de ambiente no arquivo .env
@@ -48,7 +48,7 @@ docker-compose up -d
 
 Acesse o container
 ```sh
-docker-compose exec app bash
+docker-compose e✔ec app bash
 ```
 
 
@@ -76,22 +76,22 @@ após isso você poderá utilizar o arquivo do postman que será disponibilizado
 |/logout| POST  | ✔ | - | Rota para Leslogar usuário|
 |/me| GET  | ✔ |  | Rota ver as informações do usuário|
 |||Permissions|||
-|/permissions| GET  | X | - | Rota visualizar todas as permissões|
-|/permissions| POST  | X | name, description | Rota visualizar todas as permissões|
-|/permissions/:id| PUT  | X | name, Description, ID da permissão | Rota para atualiazar as permissões|
-|/permissions/:id| DEL  | X | id da permissão | Rota para deletar as permissões|
-|/permissions/:id| GET  | X | - | Rota visualizar uma permissão específica através do ID|
+|/permissions| GET  | ✔ | - | Rota visualizar todas as permissões|
+|/permissions| POST  | ✔ | name, description | Rota visualizar todas as permissões|
+|/permissions/:id| PUT  | ✔ | name, Description, ID da permissão | Rota para atualiazar as permissões|
+|/permissions/:id| DEL  | ✔ | id da permissão | Rota para deletar as permissões|
+|/permissions/:id| GET  | ✔ | - | Rota visualizar uma permissão específica através do ID|
 |||Profiles|||
-|/profiles| GET  | X | - | Rota visualizar todos os perfis|
-|/profiles| POST  | X | name, description | Rota visualizar todos os perfis|
-|/profiles/:id| PUT  | X | name, Description, ID do perfil | Rota para atualiazar os perfis|
-|/profiles/:id| DEL  | X | id da permissão | Rota para deletar as permissões|
-|||Profile x Permissions|||
-|/profiles/:id/sync-permissions| POST  | X | id do perfil, e array de permissões | Rota para sincronizar permissões com perfis|
-|||Profile x Users|||
-|/users/:id/sync-profiles| POST  | X | id do usuário, e array de perfis | Rota para sincronizar os usuários  com os perfis|
+|/profiles| GET  | ✔ | - | Rota visualizar todos os perfis|
+|/profiles| POST  | ✔ | name, description | Rota visualizar todos os perfis|
+|/profiles/:id| PUT  | ✔ | name, Description, ID do perfil | Rota para atualiazar os perfis|
+|/profiles/:id| DEL  | ✔ | id da permissão | Rota para deletar as permissões|
+|||Profile ✔ Permissions|||
+|/profiles/:id/sync-permissions| POST  | ✔ | id do perfil, e array de permissões | Rota para sincronizar permissões com perfis|
+|||Profile ✔ Users|||
+|/users/:id/sync-profiles| POST  | ✔ | id do usuário, e array de perfis | Rota para sincronizar os usuários  com os perfis|
 |||Users|||
-|/users| GET  | X | - | Rota visualizar todos os perfis|
-|/users| POST  | X | name,email,password | Rota criar usuário|
-|/users/:id| PUT  | X | name, password, ID do usuário | Rota para atualiazar o usuário|
-|/users/:id| DEL  | X | id do usuário | Rota para deletar o usuário|
+|/users| GET  | ✔ | - | Rota visualizar todos os perfis|
+|/users| POST  | ✔ | name,email,password | Rota criar usuário|
+|/users/:id| PUT  | ✔ | name, password, ID do usuário | Rota para atualiazar o usuário|
+|/users/:id| DEL  | ✔ | id do usuário | Rota para deletar o usuário|
