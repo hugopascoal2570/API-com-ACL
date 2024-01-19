@@ -86,9 +86,9 @@ após isso você poderá utilizar o arquivo do postman que será disponibilizado
 |/profiles| POST  | ✔ | name, description | Rota visualizar todos os perfis|
 |/profiles/:id| PUT  | ✔ | name, Description, ID do perfil | Rota para atualiazar os perfis|
 |/profiles/:id| DEL  | ✔ | id da permissão | Rota para deletar as permissões|
-|||Profile ✔ Permissions|||
+|||Profile X Permissions|||
 |/profiles/:id/sync-permissions| POST  | ✔ | id do perfil, e array de permissões | Rota para sincronizar permissões com perfis|
-|||Profile ✔ Users|||
+|||Profile X Users|||
 |/users/:id/sync-profiles| POST  | ✔ | id do usuário, e array de perfis | Rota para sincronizar os usuários  com os perfis|
 |||Users|||
 |/users| GET  | ✔ | - | Rota visualizar todos os perfis|
