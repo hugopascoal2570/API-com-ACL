@@ -15,7 +15,7 @@ cd api-acl
 
 Crie o Arquivo .env
 ```sh
-cp .env.e✔ample .env
+cp .env.example .env
 ```
 
 Atualize essas variáveis de ambiente no arquivo .env
@@ -48,7 +48,7 @@ docker-compose up -d
 
 Acesse o container
 ```sh
-docker-compose e✔ec app bash
+docker-compose exec app bash
 ```
 
 
