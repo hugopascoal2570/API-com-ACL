@@ -48,7 +48,7 @@ docker-compose up -d
 
 Acesse o container
 ```sh
-docker-compose e✔ec app bash
+docker-compose exec app bash
 ```
 
 
