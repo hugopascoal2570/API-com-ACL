@@ -75,22 +75,22 @@ após isso você poderá utilizar o arquivo do postman que será disponibilizado
 |/login| POST  | X | email, password, device_name | Rota para criação de usuário|
 |/logout| POST  | ✔ | - | Rota para Leslogar usuário|
 |/me| GET  | ✔ |  | Rota ver as informações do usuário|
-|---------|-----------|-------------- Permissions --------|------------|-------------|
+|-----|-----|------ Permissions -----|-----|-----| 
 |/permissions| GET  | X | - | Rota visualizar todas as permissões|
 |/permissions| POST  | X | name, description | Rota visualizar todas as permissões|
 |/permissions/:id| PUT  | X | name, Description, ID da permissão | Rota para atualiazar as permissões|
 |/permissions/:id| DEL  | X | id da permissão | Rota para deletar as permissões|
 |/permissions/:id| GET  | X | - | Rota visualizar uma permissão específica através do ID|
-|-------|---------|-----------|------- Profiles --------|-----------|--------------|
+|-----|-----|------ Profiles -----|-----|-----| 
 |/profiles| GET  | X | - | Rota visualizar todos os perfis|
 |/profiles| POST  | X | name, description | Rota visualizar todos os perfis|
 |/profiles/:id| PUT  | X | name, Description, ID do perfil | Rota para atualiazar os perfis|
 |/profiles/:id| DEL  | X | id da permissão | Rota para deletar as permissões|
-|---------|----------|--------|------- Profile x permissions ---------|------------|------------| 
+|-----|-----|------ Profile x Permissions -----|-----|-----| 
 |/profiles/:id/sync-permissions| POST  | X | id do perfil, e array de permissões | Rota para sincronizar permissões com perfis|
-|---------------------------------- Profile x users ---------------------------------| 
+|-----|-----|------ Profile x Users -----|-----|-----| 
 |/users/:id/sync-profiles| POST  | X | id do usuário, e array de perfis | Rota para sincronizar os usuários  com os perfis|
-|---------|---------|----------|------ Users -----------|-------------|---------| 
+|-----|-----|------ Users -----|-----|-----| 
 |/users| GET  | X | - | Rota visualizar todos os perfis|
 |/users| POST  | X | name,email,password | Rota criar usuário|
 |/users/:id| PUT  | X | name, password, ID do usuário | Rota para atualiazar o usuário|
